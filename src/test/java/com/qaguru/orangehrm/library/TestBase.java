@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -43,7 +42,7 @@ public abstract class TestBase {
                 driver = new ChromeDriver();
                 break;
         }
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.get(baseUrl);
     }
     @AfterMethod
