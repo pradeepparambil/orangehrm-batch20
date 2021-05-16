@@ -43,7 +43,7 @@ public abstract class TestBase {
                 driver = new ChromeDriver();
                 break;
         }
-//        driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.get(baseUrl);
     }
     @AfterMethod
