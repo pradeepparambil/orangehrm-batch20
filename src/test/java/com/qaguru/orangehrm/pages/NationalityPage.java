@@ -9,7 +9,10 @@ public class NationalityPage extends PageBase {
     private final String idBtnAdd = "btnAdd";
     private final String idTxtNationality = "nationality_name";
     private final String idBtnSave = "btnSave";
+    private final String idBtnDelete = "btnDelete";
+    private final String idBtnConfirmOk = "dialogDeleteBtn";
     private final String xpNewNationality = "//a[text()='XXX']";
+    private final String xpChkDelete = "//a[text()='XXX']//preceding::input[@name='chkSelectRow[]'][1]";
 
     public NationalityPage(WebDriver driver) {
         super(driver);
@@ -22,4 +25,14 @@ public class NationalityPage extends PageBase {
         Assert.assertTrue(super.isElementVisible(By.xpath(xpNewNationality.replace("XXX",nationality))),
                 "The new nationality is not added");
     }
+
+    public void deleteNationality(String nationality) {
+
+        super.click(By.xpath(xpChkDelete.replace("XXX",nationality)));
+        super.click(By.id(idBtnDelete));
+        super.click(By.id(idBtnConfirmOk));
+        Assert.assertFalse(super.isElementVisible(By.xpath(xpNewNationality.replace("XXX",nationality))),
+                "The nationality is not deleted");
+    }
+
 }

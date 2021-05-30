@@ -22,8 +22,24 @@ public class NationalityTest extends TestBase {
 
         NationalityPage nationalityPage = new NationalityPage(driver);
         nationalityPage.addNewNationality("AAA_"+UUID.randomUUID());
+    }
+    @Test
+    public void deleteNationality(){
+        String username = "admin";
+        String password = "admin123";
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login(username,password);
+
+        HeaderPage headerPage = new HeaderPage(driver);
+        headerPage.selectMenu(MenuOptions.NATIONALITIES);
+
+        NationalityPage nationalityPage = new NationalityPage(driver);
+        String nationality = "AAA_"+UUID.randomUUID();
+        nationalityPage.addNewNationality(nationality);
+        nationalityPage.deleteNationality(nationality);
 
     }
+
 
 
 }
