@@ -21,7 +21,9 @@ public class NationalityTest extends TestBase {
         headerPage.selectMenu(MenuOptions.NATIONALITIES);
 
         NationalityPage nationalityPage = new NationalityPage(driver);
-        nationalityPage.addNewNationality("AA_"+ UUID.randomUUID());
+        nationalityPage.addNewNationality("AAA_"+UUID.randomUUID());
 
     }
+
+
 }
