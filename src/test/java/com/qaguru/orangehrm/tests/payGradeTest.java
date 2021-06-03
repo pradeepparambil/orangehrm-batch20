@@ -1,23 +1,27 @@
 package com.qaguru.orangehrm.tests;
 
-
 import com.qaguru.orangehrm.library.TestBase;
 import com.qaguru.orangehrm.pages.HeaderPage;
 import com.qaguru.orangehrm.pages.LoginPage;
 import com.qaguru.orangehrm.pages.MenuOptions;
+import com.qaguru.orangehrm.pages.PayGradePage;
 import org.testng.annotations.Test;
 
-public class MenuTests extends TestBase {
+import java.util.UUID;
 
+public class payGradeTest extends TestBase {
     @Test
-    public void menuTest(){
+    public void addPayGrade(){
+        String username = "admin";
+        String password = "admin123";
         LoginPage loginPage = new LoginPage(driver);
+        loginPage.login(username,password);
+
         HeaderPage headerPage = new HeaderPage(driver);
-        loginPage.login("admin", "admin123");
-        headerPage.selectMenu(MenuOptions.NATIONALITIES);
         headerPage.selectMenu(MenuOptions.PAY_GRADES);
-        System.out.println("test");
+
+       PayGradePage paygradePage = new PayGradePage(driver);
+        paygradePage.addNewPayGrade("AA_"+ UUID.randomUUID());
 
     }
-
 }
