@@ -49,7 +49,7 @@ public class NationalityTest extends TestBase {
     public void addNationalityParameterized(String nationalityFile) throws IOException {
         URL url = getClass().getClassLoader().getResource(nationalityFile);
         ObjectMapper mapper = new ObjectMapper();
-        Nationality nationality = mapper.readValue(url,Nationality.class);
+        Nationality nationality = mapper.readValue(url, Nationality.class);
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(nationality.getUserName(),nationality.getPassword());
