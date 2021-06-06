@@ -15,6 +15,7 @@ public class MenuOptions {
     public static final String EMPLOYEE_REPORTS = "PIM|Reports";
     public static final String DIRECTORY = "Directory";
     public static final String NATIONALITIES = "Admin|Nationalities";
+    public static final String CREATE_LANGUAGE = "Admin|Qualifications|Languages";
 
 
 }
