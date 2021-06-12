@@ -7,6 +7,7 @@ import com.qaguru.orangehrm.pages.LoginPage;
 import com.qaguru.orangehrm.pages.MenuOptions;
 import org.testng.annotations.Test;
 
+
 public class MenuTests extends TestBase {
 
     @Test

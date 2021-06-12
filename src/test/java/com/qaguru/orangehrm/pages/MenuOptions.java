@@ -16,6 +16,6 @@ public class MenuOptions {
     public static final String DIRECTORY = "Directory";
     public static final String NATIONALITIES = "Admin|Nationalities";
     public static final String CREATE_LANGUAGE = "Admin|Qualifications|Languages";
-
+    public static final String MEMBERSHIPS = "Admin|Qualifications|Memberships";
 
 }
